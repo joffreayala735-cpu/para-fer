@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Cumpleaños Fernanda 🎂</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ff758c,#ff7eb3,#8e44ad);overflow:hidden;display:flex;justify-content:center;align-items:center}
+.tarjeta{position:relative;z-index:10;width:90%;max-width:650px;padding:35px 25px;text-align:center;background:rgba(255,255,255,.94);border-radius:30px;box-shadow:0 15px 40px rgba(0,0,0,.35);animation:entrada 1.5s ease}
+h1{margin:0;font-size:42px;color:#e91e63;animation:brillo 2s infinite}
+h2{margin:10px 0;font-size:38px;color:#8e44ad}.edad{font-size:85px;font-weight:bold;color:#ff4081;text-shadow:3px 3px 8px rgba(0,0,0,.2)}
+.mensaje{font-size:19px;line-height:1.6;color:#444}
+button{margin-top:15px;padding:15px 30px;border:0;border-radius:30px;background:linear-gradient(45deg,#e91e63,#9c27b0);color:white;font-size:18px;font-weight:bold;cursor:pointer;box-shadow:0 5px 15px rgba(0,0,0,.25)}
+#sorpresa{display:none;margin-top:20px;color:#8e44ad;font-size:21px;font-weight:bold}
+.torta{font-size:70px;margin:5px;animation:saltar 1.5s infinite}
+.globo{position:absolute;font-size:55px;animation:flotar 5s infinite ease-in-out}
+.g1{left:5%;top:10%}.g2{right:5%;top:15%;animation-delay:1s}.g3{left:8%;bottom:10%;animation-delay:2s}.g4{right:8%;bottom:8%;animation-delay:3s}
+.corazon{position:absolute;font-size:25px;animation:subir 6s linear infinite}.c1{left:20%;bottom:-30px}.c2{left:40%;bottom:-50px;animation-delay:2s}.c3{left:70%;bottom:-40px;animation-delay:4s}.c4{left:85%;bottom:-20px;animation-delay:1s}
+.confeti{position:absolute;width:10px;height:20px;animation:caer 5s linear infinite}
+.cof1{left:10%;background:#ffeb3b}.cof2{left:25%;background:#00e5ff;animation-delay:1s}.cof3{left:45%;background:#ff4081;animation-delay:2s}.cof4{left:65%;background:#76ff03;animation-delay:.5s}.cof5{left:85%;background:#ff9800;animation-delay:1.5s}
+@keyframes entrada{from{opacity:0;transform:scale(.5) rotate(-5deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes brillo{0%,100%{text-shadow:0 0 5px #ff80ab}50%{text-shadow:0 0 25px #ff4081}}
+@keyframes saltar{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes flotar{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-35px) rotate(5deg)}}
+@keyframes subir{from{transform:translateY(0);opacity:1}to{transform:translateY(-110vh);opacity:0}}
+@keyframes caer{from{top:-30px;transform:rotate(0)}to{top:110vh;transform:rotate(360deg)}}
+@media(max-width:500px){h1{font-size:30px}h2{font-size:30px}.edad{font-size:65px}.mensaje{font-size:16px}.tarjeta{padding:25px 18px}.globo{font-size:40px}}
+</style>
+</head>
+<body>
+<div class="globo g1">🎈</div><div class="globo g2">🎈</div><div class="globo g3">🎈</div><div class="globo g4">🎈</div>
+<div class="corazon c1">💖</div><div class="corazon c2">💕</div><div class="corazon c3">💗</div><div class="corazon c4">💝</div>
+<div class="confeti cof1"></div><div class="confeti cof2"></div><div class="confeti cof3"></div><div class="confeti cof4"></div><div class="confeti cof5"></div>
+<div class="tarjeta">
+<div class="torta">🎂</div>
+<h1>🎉 ¡FELIZ CUMPLEAÑOS! 🎉</h1>
+<h2>Fernanda 💖</h2>
+<div class="edad">17</div>
+<div class="mensaje">
+Hoy es un día muy especial porque celebras tus <strong>17 años</strong>. 🥳<br><br>
+Espero que este nuevo año de vida esté lleno de momentos increíbles, alegría, éxitos y muchas razones para sonreír. ✨<br><br>
+Que todos tus sueños y metas poco a poco se hagan realidad y que nunca te falten personas que te aprecien y quieran verte feliz. 💕<br><br>
+<strong>¡Disfruta muchísimo tu día, Fernanda! 🎂🎉</strong>
+</div>
+<button onclick="mostrarSorpresa()">💝 Tengo una sorpresa</button>
+<div id="sorpresa">✨ ¡Que estos 17 años sean el comienzo de una etapa maravillosa! ✨<br><br>🎊 ¡FELIZ CUMPLEAÑOS, FERNANDA! 🎊</div>
+</div>
+<script>
+function mostrarSorpresa(){
+document.getElementById("sorpresa").style.display="block";
+for(let i=0;i<20;i++){
+let c=document.createElement("div"); c.innerHTML="💖"; c.style.position="fixed";
+c.style.left=Math.random()*100+"%"; c.style.bottom="-30px"; c.style.fontSize=(20+Math.random()*30)+"px";
+c.style.animation="subir 4s linear"; document.body.appendChild(c);
+setTimeout(()=>c.remove(),4000);
+}}
+</script>
+</body>
+</html>
